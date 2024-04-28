@@ -19,6 +19,26 @@
         "iosfwd": "cpp",
         "help.C": "cpp",
         "error.C": "cpp",
-        "stdexcept": "cpp"
+        "stdexcept": "cpp",
+        "__node_handle": "cpp",
+        "__split_buffer": "cpp",
+        "array": "cpp",
+        "list": "cpp",
+        "string_view": "cpp",
+        "unordered_map": "cpp",
+        "vector": "cpp",
+        "__hash_table": "cpp",
+        "__tuple": "cpp",
+        "type_traits": "cpp",
+        "limits": "cpp",
+        "ratio": "cpp",
+        "tuple": "cpp",
+        "variant": "cpp",
+        "chrono": "cpp",
+        "compare": "cpp",
+        "cstddef": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "new": "cpp"
     }
 }

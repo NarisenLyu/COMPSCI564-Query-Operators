@@ -64,7 +64,7 @@ else if (type == INTEGER){
 	status = scanner.startScan(desc.attrOffset,desc.attrLen, INTEGER, reinterpret_cast<char*> (ptr), op);
 }
 else if (type == FLOAT){
-	int attrValueFloat = atof(attrValue);
+	float attrValueFloat = atof(attrValue);
 	void *ptr = &(attrValueFloat);
 	status = scanner.startScan(desc.attrOffset,desc.attrLen, FLOAT, reinterpret_cast<char*> (ptr), op);
 }
