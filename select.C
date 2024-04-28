@@ -66,12 +66,7 @@ const Status QU_Select(const string & result,
 	AttrDesc attrDesc;
 	if (attr == NULL){
 		//TODO how to set it up??
-		attrDesc.attrLen = 0;
-		//attrDesc.attrName = NULL;
 		attrDesc.attrName[0] = NULL;
-		attrDesc.attrOffset = 0;
-		attrDesc.attrType = STRING;
-		//attrDesc.relName = NULL;
 		strcpy(attrDesc.relName, projNames[0].relName);
 		attrValue = NULL;
 	}
