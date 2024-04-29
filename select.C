@@ -111,6 +111,10 @@ const Status ScanSelect(const string & result,
 		cout<<"6";
 		return status;
 	}
+	//declare variables
+	int attrValueInt;
+	float attrValueFloat;
+	void *ptr = nullptr;
 	// check attrType: INTEGER, FLOAT, STRING
 	//if (attrDesc->attrName == NULL){
 	if (filter == NULL){
@@ -121,13 +125,13 @@ const Status ScanSelect(const string & result,
 	// convert attribute
 	// locate all the qualifying tuples using a filtered HeapFileScan.
 	else if (attrDesc->attrType == INTEGER){
-		int attrValueInt = atoi(filter);
-		void *ptr = &(attrValueInt);
+		attrValueInt = atoi(filter);
+	    ptr = &(attrValueInt);
 		status = heapScanner.startScan(attrDesc->attrOffset,attrDesc->attrLen, INTEGER, reinterpret_cast<char*> (ptr), op);
 	}
 	else if (attrDesc->attrType == FLOAT){
-		float attrValueFloat = atof(filter);
-		void *ptr = &(attrValueFloat);
+		attrValueFloat = atof(filter);
+		ptr = &(attrValueFloat);
 		status = heapScanner.startScan(attrDesc->attrOffset,attrDesc->attrLen, FLOAT, reinterpret_cast<char*> (ptr), op);
 	}
 	else if (attrDesc->attrType == STRING){

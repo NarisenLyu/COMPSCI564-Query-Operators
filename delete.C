@@ -50,6 +50,10 @@ if (! attrName.empty()){
 	//assert(desc.attrType == type);
 }
 
+//declare variables
+int attrValueInt;
+float attrValueFloat;
+void *ptr = nullptr;
 //check if attrName is NULL
 if (attrName.empty()){
 	//scan without filtering
@@ -59,13 +63,13 @@ if (attrName.empty()){
 // convert attribute
 // locate all the qualifying tuples using a filtered HeapFileScan.
 else if (type == INTEGER){
-	int attrValueInt = atoi(attrValue);
-	void *ptr = &(attrValueInt);
+	attrValueInt = atoi(attrValue);
+	ptr = &(attrValueInt);
 	status = scanner.startScan(desc.attrOffset,desc.attrLen, INTEGER, reinterpret_cast<char*> (ptr), op);
 }
 else if (type == FLOAT){
-	float attrValueFloat = atof(attrValue);
-	void *ptr = &(attrValueFloat);
+	attrValueFloat = atof(attrValue);
+	ptr = &(attrValueFloat);
 	status = scanner.startScan(desc.attrOffset,desc.attrLen, FLOAT, reinterpret_cast<char*> (ptr), op);
 }
 else if (type == STRING){
