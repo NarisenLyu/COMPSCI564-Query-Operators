@@ -1,0 +1,2 @@
+Nixie Koch: worked on delete.C
+Narisen Lyu: worked on select.C, insert.C
